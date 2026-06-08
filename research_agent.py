@@ -1,6 +1,7 @@
 import anthropic
 from ddgs import DDGS
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
 client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
