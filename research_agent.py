@@ -1,7 +1,9 @@
 import anthropic
 from ddgs import DDGS
+from dotenv import load_dotenv
 
-client = anthropic.Anthropic(api_key="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")
+load_dotenv()
+client = anthropic.Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
 
 system_prompt = """You are a business research analyst. When given a company name, 
 you research it thoroughly and produce a structured report covering:
